@@ -3,6 +3,10 @@
 ***
 ** Deploying contract **
 ***
+Build contract:
+
+`cargo build --target wasm32-unknown-unknown --release`
+
 Use near-cli to deploy the smart contract to NEAR test network:
 
 `near deploy --wasmFile target/wasm32-unknown-unknown/release/SharingShard.wasm --accountId <YOUR_ACCOUNT_HERE>`
@@ -22,7 +26,7 @@ Initializing contract:
 
 Add new user:
 
-`near call <CONTRACT OWNER WALLET> new_user --args '{"wallet": "<USER WALLET>", "n": "<USER NAME>", "disc": "<USER DIRCORD>", "mail": "<USER EMAL>", "interst": <CODE NUMBER FOR USER ITERESTS>}' --accountId <CALLER WALLET>`
+`near call <CONTRACT OWNER WALLET> new_user --args '{"wallet": "<USER WALLET>", "n": "<USER NAME>", "disc": "<USER DIRCORD>", "mail": "<USER EMAIL>", "interst": <CODE NUMBER FOR USER ITERESTS>}' --accountId <CALLER WALLET>`
 
 
 Add new experience:
@@ -98,9 +102,9 @@ Get user's discord:
 `near call <CONTRACT OWNER WALLET> get_user_discord --args '{"wallet": <USER WALLET>}' --accountId <CALLER WALLET>`
 
 
-Get user's emal:
+Get user's email:
 
-`near call <CONTRACT OWNER WALLET> get_user_emal --args '{"wallet": <USER WALLET>}' --accountId <CALLER WALLET>`
+`near call <CONTRACT OWNER WALLET> get_user_email --args '{"wallet": <USER WALLET>}' --accountId <CALLER WALLET>`
 
 
 Get user's interests:
