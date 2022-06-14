@@ -3,6 +3,10 @@
 ***
 ** Deploying contract **
 ***
+Build contract:
+
+`cargo build --target wasm32-unknown-unknown --release`
+
 Use near-cli to deploy the smart contract to NEAR test network:
 
 `near deploy --wasmFile target/wasm32-unknown-unknown/release/SharingShard.wasm --accountId <YOUR_ACCOUNT_HERE>`
